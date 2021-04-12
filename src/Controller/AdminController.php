@@ -6,20 +6,21 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+
 /**
- * Class SuperAdminController
+ * Class AdminController
  * @package App\Controller
- * @Route("/superadmin", name="superAdmin_")
+ * @Route("/admin", name="admin_")
  */
-class SuperAdminController extends AbstractController
+class AdminController extends AbstractController
 {
     /**
      * @Route("/", name="home")
      */
     public function index(): Response
     {
-        return $this->render('super_admin/index.html.twig', [
-            'controller_name' => 'SuperAdminController',
+        return $this->render('admin/index.html.twig', [
+            'controller_name' => 'AdminController',
         ]);
     }
 }
